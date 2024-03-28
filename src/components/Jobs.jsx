@@ -7,7 +7,7 @@ const Jobs = () => {
 
     const getJobs = async () => {
         setJobs(null)
-        const response = await fetch(`https://remotive.com/api/remote-jobs?category=${category}`)
+        const response = await fetch(`https://remotive.com/api/remote-jobs?category=${category}&limit=50`)
         const { jobs } = await response.json()
         console.log(Object.values(jobs))
         setTimeout(() => {
